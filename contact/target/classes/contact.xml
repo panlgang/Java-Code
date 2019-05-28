@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<concat-list> 
+  <contact id="002"> 
+    <name>李四</name>  
+    <gender>女</gender>  
+    <phone>13466668888</phone>  
+    <email>lisi@163.com</email>  
+    <address>户县</address> 
+  </contact>  
+  <contact id="001">
+    <name>Tom</name>
+    <gender>男</gender>
+    <phone>1234567</phone>
+    <address>美国</address>
+    <email>7654321</email>
+  </contact>
+</concat-list>
