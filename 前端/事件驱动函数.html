@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件驱动函数练习</title>
+    <script>
+        /*
+          和页面交互的过程称为事件，如鼠标的点击。
+         */
+        // 根据Id找标签
+        function show(){
+            alert("hello");
+        }
+        window.onload = function(){
+            var num = document.getElementById("button1");
+            // 给标签绑定一个onclick事件，按钮预设好一个行为
+            // num.onclick = function () {
+            //     alert("单击");
+            // }
+            num.onclick = show;
+        }
+        //alert ("hello");
+
+
+    </script>
+</head>
+<body>
+      <input type="button" value="按钮" id="button1" />
+</body>
+</html>

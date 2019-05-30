@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time</title>
+    <style>
+       div{
+           font-size: 30px;
+           color:blueviolet;
+       }
+    </style>
+    <script>
+        function time(){
+            var out = new Date();
+            var year = out.getFullYear();
+            var month = out.getMonth();
+            var day = out.getDay();
+            document.getElementById("div1").innerHTML = year + " 年 " + month + " 月 " + day + " 日 ";
+        }
+    </script>
+</head>
+<body>
+        <div id="div1"></div>
+        <input type="button" value="按钮" id="button1"  >
+        <script>
+            time();
+        </script>
+        <input type="button" onclick="location.reload()" value="刷新">
+</body>
+</html>

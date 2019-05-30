@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清空文本内容</title>
+    <script>
+        window.onload = function () {
+            var obtn = document.getElementById("btn");
+            var otxt = document.getElementById("txt");
+            //绑定onclick事件 给按钮
+            obtn.onclick = function () {
+                // value 属性获取到值
+                otxt.value = "修改后的内容";
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" value = "默认文字" id="txt"/>
+<input type="button" value="修改" id="btn">
+</body>
+</html>
