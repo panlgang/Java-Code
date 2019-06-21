@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>秒表</title>
+    <style>
+        #div1{
+            width: 300px;
+            height:400px;
+            background-color:blueviolet;
+            margin: 100px;
+            text-align: center;
+        }
+        #count{
+            width:200px;
+            height:150px;
+            line-height: 150px;
+            margin: auto;
+            font-size: 40px;
+        }
+        #div1 input{
+            width: 150px;
+            height: 40px;
+            background-color: yellow;
+            font-size: 25px;
+            margin-top: 20px;
+
+        }
+    </style>
+
+    <script type="text/javascript">
+        var count = 0;
+        var timer = null;
+        function showNumber(number){
+            if(num < 10){
+                return "0" + num;
+            }else{
+                return num;
+            }
+        }
+        function show(){
+            //alert(count);
+            count++;
+            var s = (count % 60) < 10 ? "0" + (count % 60) : count % 60 ;
+            var m = (parseInt(count / 60) % 60) < 10 ? "0" + (parseInt(count / 60) % 60) : (parseInt(count / 60) % 60);
+            var h = (parseInt(count / 3600)) < 10 ? "0" + (parseInt(count / 3600)) : (parseInt(count / 3600));
+            document.getElementById("S").innerText = s;
+            document.getElementById("M").innerText = m;
+            document.getElementById("H").innerText = h;
+            }
+        function start(){
+            timer = setInterval(show,10);
+        }
+        function pause(){
+            clearInterval(timer);
+        }
+        function stop(){
+            count = 0;
+            clearInterval(timer);
+            document.getElementById("H").innerText="00"
+            document.getElementById("M").innerText="00"
+            document.getElementById("S").innerText="00"
+        }
+    </script>
+
+</head>
+<body>
+        <div id="div1">
+            <div id="count">
+                <span id="H">00</span>
+                <span id="M">00</span>
+                <span id="S">00</span>
+            </div>
+        <input type="button" id="start" value="开始" onclick="start()">
+        <input type="button" id="pause" value="暂停" onclick="pause()">
+        <input type="button" id="stop" value="终止"onclick="stop()">
+        </div>
+</body>
+</html>
