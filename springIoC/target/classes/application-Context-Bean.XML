@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <bean id="bean1" class="com.xust.excellent.injection.Bean1">
+        <property name="name" value="root"/>
+        <property name="list">
+            <list>
+                <value>123</value>
+                <value>list</value>
+                <value>hehe</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="key1" value="value1"/>
+            </map>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>set1</value>
+                <value>set2</value>
+            </set>
+        </property>
+
+        <property name="arr">
+            <list>
+                <value>arr1</value>
+                <value>arr2</value>
+                <value>arr3</value>
+            </list>
+        </property>
+        <property name="user" ref="user"></property>
+    </bean>
+    <bean id="user" class="com.xust.excellent.injection.UserInfor">
+        <property name="username" value="admine"/>
+        <property name="password" value="admine"/>
+    </bean>
+</beans>
